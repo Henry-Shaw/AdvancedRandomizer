@@ -1,22 +1,41 @@
-# Compiled class file
+# use glob syntax.
+syntax: glob
+*.ser
 *.class
+*~
+*.bak
+#*.off
+*.old
 
-# Log file
-*.log
+# eclipse conf file
+.settings
+.classpath
+.project
+.manager
+.scala_dependencies
 
-# BlueJ files
-*.ctxt
+# idea
+.idea
+*.iml
 
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
+# building
+target
+build
+null
+tmp*
+temp*
+dist
+test-output
+build.log
 
-# Package Files #
-*.jar
-*.war
-*.ear
-*.zip
-*.tar.gz
-*.rar
+# other scm
+.svn
+.CVS
+.hg*
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
+# switch to regexp syntax.
+#  syntax: regexp
+#  ^\.pc/
+
+#SHITTY output not in target directory
+build.log
