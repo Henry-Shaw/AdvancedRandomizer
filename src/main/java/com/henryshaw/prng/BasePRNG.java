@@ -125,6 +125,14 @@ public abstract class BasePRNG implements java.io.Serializable {
         return (((long) (next(26)) << 27) + next(27)) * DOUBLE_UNIT;
     }
 
+    public float nextFloat() {
+        return next(24) / ((float)(1 << 24));
+    }
+
+    public boolean nextBoolean() {
+        return next(1) != 0;
+    }
+
     public boolean isInitialised() {
         return initialised;
     }
